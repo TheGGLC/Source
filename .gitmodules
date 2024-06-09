@@ -1,0 +1,3 @@
+[submodule "sturgeon"]
+	path = sturgeon
+	url = https://github.com/crowdgames/sturgeon-pub.git

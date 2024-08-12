@@ -1,17 +1,5 @@
 #!/bin/bash
-# SLURM directives
-#SBATCH --partition=short
-#SBATCH --nodes=1
-#SBATCH --ntasks=4
-#SBATCH --cpus-per-task=3
-#SBATCH --mem=100G
-#SBATCH --time=11:59:00
-#SBATCH --job-name=myjob
-#SBATCH --output=./log/output_%j.txt
-#SBATCH --error=./log/error_%j.txt
 
-module load anaconda3/2022.05 cuda/11.8
-module load python/3.8.1
 pip install -r requirements.txt
 if [ $# -lt 2 ]; then
     echo "Usage: $0 <game> <root_folder>"

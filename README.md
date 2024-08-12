@@ -11,6 +11,8 @@ This repository includes the source code of [TheGGLC dataset](https://github.com
 `./unplayable.sh <game> <root_folder>`
 # Experiment Section Reproducibility
 ## Create Embeddings
+`git clone https://github.com/TheGGLC/TheGGLC.git`
+
 `python ./analysis/clip.py --game <game>`
 
 `python ./analysis/uumap.py --game <game>`

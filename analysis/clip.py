@@ -62,24 +62,24 @@ if __name__ == '__main__':
 
     print(f"device = {device}")
     game = args.game
-    game_directory_p = f'./game_dataset/db_{game}/playable/images'
+    game_directory_p = f'./TheGGLC/{game}/solvable/images'
     image_pathes_p = find_png_files(game_directory_p)
-    print(f"{len(image_pathes_p)} playable levels found.")
+    print(f"{len(image_pathes_p)} solvable levels found.")
 
     if game == "platform":
-        game_directory_up = f'./game_dataset/db_{game}/unplayable/images'
+        game_directory_up = f'./TheGGLC/{game}/unsolvable/images'
         image_pathes_up_1 = find_png_files(game_directory_up)
-        game_directory_up = f'./game_dataset/db_{game}/unsuable_corrected/images'
+        game_directory_up = f'./TheGGLC/{game}/unsuable/images'
         image_pathes_up_2 = find_png_files(game_directory_up)
         image_pathes_up = np.concatenate((image_pathes_up_1, image_pathes_up_2), axis=0)
     else:
-        game_directory_up = f'./game_dataset/db_{game}/unplayable/images'
+        game_directory_up = f'./TheGGLC/{game}/unsolvable/images'
         image_pathes_up = find_png_files(game_directory_up)
-    print(f"{len(image_pathes_up)} unplayable levels found.")
+    print(f"{len(image_pathes_up)} unsolvable levels found.")
 
     # list1, list2 = truncate_to_same_length(image_pathes_p, image_pathes_up)
-    # print(f"{len(list1)} playable levels.")
-    # print(f"{len(list2)} unplayable levels.")
+    # print(f"{len(list1)} solvable levels.")
+    # print(f"{len(list2)} unsolvable levels.")
 
     if not os.path.exists(f'./embeddings/{game}'):
         os.makedirs(f'./embeddings/{game}')

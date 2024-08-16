@@ -21,5 +21,6 @@ This repository includes the source code of [TheGGLC dataset](https://github.com
 ## Astuteness Comparison
 `python ./analysis/metric_compare.py`
 
-## The solvability determination tool
+# Other Tools
+## The Solvability Determination Tool
 `./solution.sh <game> <input_file_path> <output_file_path>`
